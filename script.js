@@ -7,11 +7,11 @@ var spcharacterList = ["#", "@", "!", "$", "%", "^", "&", "*", "-", "_", "+", "=
 var letterListUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var passwordList = [];
 var length;
-var mergeList; 
+var mergeList = []; 
 // Write password to the #password input
 function writePassword() {
   generatePassword();
-  var password = passwordList.toString("");
+  var password = passwordList.join("");
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
