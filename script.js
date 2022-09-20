@@ -16,33 +16,36 @@ function writePassword() {
 
   passwordText.value = password;
   console.log(passwordList)
+  console.log(password)
 }
 
 function generatePassword() {
   length = prompt("how long do you want your password to be?", "");
 
 
-  var letters = confirm("Do you want uppercase letters?");
-  if (letters = true) {
+
+  if (confirm("Do you want uppercase letters?") == true) {
     mergeList = mergeList.concat(letterListUppercase);
-  };
-  var symbols = confirm("Do you want symbols?");
-  if (symbols = true) {
+  }
+
+
+  if (confirm("Do you want symbols?") == true) {
     mergeList = mergeList.concat(spcharacterList);
   };
 
-  var numbers = confirm("Do you want numbers?");
+
   
-  if (numbers = true) {
+  if (confirm("Do you want numbers?") == true) {
     mergeList = mergeList.concat(numberList);
   };
+
   mergeList = mergeList.concat(letterList)
   for (let i = 0; i < length; i++) {
     passwordList.push(mergeList[Math.floor(Math.random() * mergeList.length)]);
 
   }
   console.log(length);
-
+console.log(mergeList)
 }
 
 // Add event listener to generate button
